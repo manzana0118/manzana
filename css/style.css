@@ -1,0 +1,488 @@
+@charset "utf-8";
+@import url('../css/fonts/fonts.css');
+@import url('../css/fonts/notosanskr/NotoSansKR.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline-style: none; */
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+li {
+  list-style: none;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Roboto','Noto Sans KR', sans-serif;
+}
+
+/* 공통요소 */
+.clearfix::after {
+  content: '';
+  position: relative;
+  display: block;
+  width: 100%;
+  clear: both;
+}
+
+.container {
+  position: relative;
+  display: block;
+  width: 1300px;
+  margin: 0 auto;
+}
+
+.wrap {
+  position: relative;
+  display: block;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 0 solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.shadow {
+  box-shadow: 0px 0px 40px rgb(29 58 83 / 15%) !important;
+}
+
+.card-img-top {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  -webkit-box-flex: 1;
+  padding: 16px 20px 10px 20px;
+}
+
+.card-title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.card-title a {
+  font-family: 'Noto Sans KR';
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: #24292d;
+}
+
+.card-desc {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: rgb(116, 117, 121);
+
+  margin-bottom: 10px;
+}
+
+.card-cate {
+  position: relative;
+  display: inline-block;
+  padding: 4px 8px;
+  font-size: 0.85em;
+  font-weight: 400;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+  background-color: #666;
+}
+
+.bg-purple {
+  color: rgb(111, 66, 193);
+  background-color: rgba(111, 66, 193, 0.1);
+}
+
+.card-footer {
+  padding: 0px 16px 16px 16px;
+  background-color: #fff;
+  border-top: 0 solid rgba(0, 0, 0, 0.1);
+}
+
+.card-f-desc {
+  font-family: 'Noto Sans KR';
+  font-size: 15px;
+}
+
+.text-orange {
+  color: rgb(253, 126, 20);
+}
+
+.nav-pills .nav-link.active {
+  color: #fff;
+  background-color: #ccabd8;
+}
+
+.nav-link {
+  color: #9701ce;
+}
+
+/* 상단 영역 */
+.header {
+  position: relative;
+  display: block;
+  height: 120px;
+
+  z-index: 999;
+}
+
+.header > .container {
+  position: relative;
+  display: block;
+  height: 100%;
+}
+
+.header-wrap {
+  position: relative;
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.h-logo {
+  position: relative;
+  display: block;
+  width: 59px;
+  height: 42px;
+  margin-right: auto;
+}
+
+.h-logo img {
+  position: relative;
+  display: block;
+  width: 59px;
+  height: 42px;
+}
+
+.gnb {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.gnb > li {
+  position: relative;
+  margin-right: 40px;
+}
+
+.gnb > li:last-child {
+  margin-right: 0;
+}
+
+.gnb > li a {
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* 메인 비주얼 영역 */
+.visual {
+  position: relative;
+  display: block;
+  height: 565px;
+}
+
+.visual > .container {
+  position: relative;
+  display: flex;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.visual-phrase {
+  position: relative;
+  display: block;
+
+  margin-top: 95px;
+}
+
+.visual-title {
+  font-family: 'Noto Sans KR';
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 1.2;
+
+  margin-bottom: 20px;
+}
+
+.visual-title span {
+  font-weight: 400;
+}
+
+.visual-desc {
+  font-family: 'Noto Sans KR';
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.visual-photo {
+  position: relative;
+  display: block;
+  width: 500px;
+  height: auto;
+}
+
+.visual-photo img {
+  position: relative;
+  display: block;
+  width: 25vw;
+
+  margin-top: 150px;
+}
+
+/* 브랜딩 영역 */
+.branding {
+  position: relative;
+  display: block;
+  height: 565px;
+}
+
+.branding > .container {
+  position: relative;
+  display: block;
+  height: 100%;
+
+  padding-top: 200px;
+}
+
+.b-title {
+  font-family: 'Roboto';
+  font-size: 40px;
+  font-weight: 600;
+
+  margin-bottom: 100px;
+}
+
+.b-content-area {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.b-desc {
+  font-family: 'Noto Sans KR';
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: left;
+
+  padding-left: 140px;
+}
+
+.b-desc span {
+  position: relative;
+  display: block;
+
+  font-size: 20px;
+  font-weight: 500;
+
+  margin-bottom: -20px;
+}
+
+/* 포트폴리오 영역 */
+.portfolio {
+  position: relative;
+  display: block;
+  height: 1400px;
+}
+
+.portfolio > .container {
+  position: relative;
+  display: block;
+  height: 100%;
+
+  padding-top: 400px;
+}
+
+.p-title {
+  font-family: 'Roboto';
+  font-size: 40px;
+  font-weight: 600;
+
+  margin-bottom: 30px;
+}
+
+.p-desc {
+  font-family: 'Noto Sans KR';
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  text-align: center;
+  color: #666;
+
+  margin-bottom: 20px;
+}
+
+.p-nav-wrap {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  background-color: rgba(204, 171, 218, 0.3);
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.p-nav-wrap > li > button {
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* 어바웃미 영역 */
+.about-me {
+  position: relative;
+  display: block;
+  height: 800px;
+}
+
+.about-me > .container {
+  position: relative;
+  display: block;
+  height: 100%;
+
+  padding-top: 300px;
+}
+
+.about-me-wrap {
+  position: relative;
+  display: block;
+}
+
+.about-me-wrap::before {
+  content: '';
+  position: absolute;
+  top: 18%;
+  left: 6%;
+
+  display: block;
+  width: 700px;
+  height: 700px;
+
+  border-radius: 50%;
+  background-color: #d0e6a5;
+  z-index: -1;
+}
+
+.a-title-wrap {
+  position: relative;
+  display: block;
+
+  margin-bottom: 80px;
+}
+
+.a-title {
+  font-family: 'Roboto';
+  font-size: 40px;
+  font-weight: 600;
+
+  margin-bottom: 20px;
+  z-index: 10;
+}
+
+.a-title::before {
+  content: '';
+  position: absolute;
+  top: -9%;
+  left: 55.3%;
+
+  display: block;
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+  background-color: #d0e6a5;
+  z-index: -1;
+}
+
+.a-desc {
+  font-family: 'Noto Sans KR';
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  text-align: center;
+  color: #666;
+
+  margin-bottom: 20px;
+}
+
+.about-main-img {
+  width: 88%;
+}
+
+.about-card-wrap .about-card .card-title {
+  padding: 5px 0px;
+}
+
+.about-card-wrap .about-card .card-title a {
+  font-size: 17px;
+}
+
+.about-card-wrap .about-card .card-desc {
+  font-size: 13px;
+  line-height: 1.23;
+}
+
+/* 스킬 영역 */
+.skills {
+  position: relative;
+  display: block;
+  height: 800px;
+}
+
+.skills > .container {
+  position: relative;
+  display: block;
+  height: 100%;
+
+  padding-top: 300px;
+}
+
+/* 하단 영역 */
+.footer {
+  position: relative;
+  display: block;
+  height: 150px;
+
+  background-color: rgb(207, 207, 207);
+}
+
+.footer > .container {
+  position: relative;
+  display: block;
+  height: 100%;
+}
