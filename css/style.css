@@ -217,7 +217,7 @@ body {
   position: relative;
   display: flex;
   height: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -251,16 +251,17 @@ body {
 .visual-photo {
   position: relative;
   display: block;
-  width: 500px;
-  height: auto;
+  width: auto;
+  height: 100%;
 }
 
 .visual-photo img {
-  position: relative;
+  position: absolute;
+  right: 0;
+  top: 58%;
+  transform: translateY(-50%);
   display: block;
-  width: 25vw;
-
-  margin-top: 150px;
+  width: 27vw;
 }
 
 /* 브랜딩 영역 */
