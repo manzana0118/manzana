@@ -25,6 +25,7 @@ li {
 
 html {
   font-size: 10px;
+  overflow-x: hidden;
 }
 
 body {
@@ -147,13 +148,21 @@ body {
   color: #9701ce;
 }
 
+.nav-link:hover {
+  color: #fff;
+}
+
 /* 상단 영역 */
 .header {
-  position: relative;
+  position: fixed;
+  left: 0;
+  top: 0;
   display: block;
+  width: 100%;
   height: 120px;
 
   z-index: 999;
+  background-color: #fff;
 }
 
 .header > .container {
@@ -206,11 +215,16 @@ body {
   font-weight: 400;
 }
 
+.gnb > li a:hover {
+  color: #ffdd94;
+}
+
 /* 메인 비주얼 영역 */
 .visual {
   position: relative;
   display: block;
-  height: 565px;
+  height: 100vh;
+  min-height: 960px;
 }
 
 .visual > .container {
@@ -229,12 +243,28 @@ body {
 }
 
 .visual-title {
+  position: relative;
+  display: block;
+
   font-family: 'Noto Sans KR';
   font-size: 50px;
   font-weight: 600;
   line-height: 1.2;
 
   margin-bottom: 20px;
+}
+
+.visual-title em::before {
+  content: '';
+  position: absolute;
+  top: 89%;
+  left: 153px;
+  display: block;
+  width: 145px;
+  height: 10px;
+
+  background-color: #ffdd94;
+  z-index: -1;
 }
 
 .visual-title span {
@@ -244,7 +274,8 @@ body {
 .visual-desc {
   font-family: 'Noto Sans KR';
   font-size: 20px;
-  line-height: 1.2;
+  line-height: 1.3;
+  letter-spacing: -0.6px;
   text-align: left;
 }
 
@@ -252,34 +283,35 @@ body {
   position: relative;
   display: block;
   width: auto;
-  height: 100%;
 }
 
 .visual-photo img {
-  position: absolute;
-  right: 0;
-  top: 58%;
-  transform: translateY(-50%);
+  position: relative;
   display: block;
-  width: 27vw;
+  width: 35vw;
+
+  margin-right: -1vw;
+  margin-top: 50px;
 }
 
 /* 브랜딩 영역 */
 .branding {
   position: relative;
   display: block;
-  height: 565px;
+  min-height: 760px;
+  height: 70vh;
 }
 
 .branding > .container {
   position: relative;
   display: block;
   height: 100%;
-
-  padding-top: 200px;
 }
 
 .b-title {
+  position: relative;
+  display: block;
+
   font-family: 'Roboto';
   font-size: 40px;
   font-weight: 600;
@@ -317,15 +349,12 @@ body {
 .portfolio {
   position: relative;
   display: block;
-  height: 1400px;
+  padding-bottom: 160px;
 }
 
 .portfolio > .container {
   position: relative;
   display: block;
-  height: 100%;
-
-  padding-top: 400px;
 }
 
 .p-title {
@@ -344,7 +373,7 @@ body {
   text-align: center;
   color: #666;
 
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .p-nav-wrap {
@@ -368,15 +397,13 @@ body {
 .about-me {
   position: relative;
   display: block;
-  height: 800px;
+  padding: 100px;
+  padding-bottom: 250px;
 }
 
 .about-me > .container {
   position: relative;
   display: block;
-  height: 100%;
-
-  padding-top: 300px;
 }
 
 .about-me-wrap {
@@ -387,15 +414,14 @@ body {
 .about-me-wrap::before {
   content: '';
   position: absolute;
-  top: 18%;
-  left: 6%;
+  top: 19%;
+  left: 2%;
 
   display: block;
-  width: 700px;
-  height: 700px;
+  width: 100%;
+  height: 750px;
 
-  border-radius: 50%;
-  background-color: #d0e6a5;
+  background: url('../images/About_me_bg.png') no-repeat center;
   z-index: -1;
 }
 
@@ -462,28 +488,152 @@ body {
 .skills {
   position: relative;
   display: block;
-  height: 800px;
+  padding: 100px;
 }
 
 .skills > .container {
   position: relative;
   display: block;
   height: 100%;
-
-  padding-top: 300px;
 }
+
+.skills > .container::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: block;
+  width: 100vw;
+  height: 790px;
+
+  background-color: #f5f7f9;
+  z-index: -1;
+}
+
+.skill-box {
+  position: relative;
+  display: block;
+  width: 250px;
+  height: 270px;
+  background-color: #fff;
+  
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+
+  padding: 20px;
+  /* margin-right: 20px; */
+}
+
+.skill-box:last-child {
+  margin-right: 0;
+}
+
+.skill-box img {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+
+.s-box-title {
+  position: absolute;
+  top: 110px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.s-progressbar {
+  position: absolute;
+  top: 153px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 80%;
+}
+
+.progress-bar {
+  background-color: #86e3ce;
+}
+
+.s-box-desc {
+  position: absolute;
+  top: 190px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: block;
+  width: 80%;
+
+  font-family: 'Noto Sans KR';
+  font-size: 12px;
+  line-height: 1.4;
+  letter-spacing: -0.8px;
+  text-align: center;
+  color: #666;
+}
+
+.s-right {
+  padding-left: 50px;
+}
+
+.s-title {
+  font-family: 'Roboto';
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.s-desc {
+  font-family: 'Noto Sans KR';
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  text-align: center;
+  color: #666;
+
+  white-space: nowrap;
+}
+
+
 
 /* 하단 영역 */
 .footer {
   position: relative;
   display: block;
-  height: 150px;
+  padding: 100px;
 
-  background-color: rgb(207, 207, 207);
+  background-color: #fff;
 }
 
 .footer > .container {
   position: relative;
   display: block;
-  height: 100%;
+}
+
+.f-title {
+  font-family: 'Noto Sans KR';
+  font-size: 20px;
+}
+
+.contact-wrap{
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+.f-decs-wrap {
+  margin-top: 20px;
+}
+
+.c-desc {
+  font-family: 'Noto Sans KR';
+  white-space: nowrap;
 }
