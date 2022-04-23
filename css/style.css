@@ -393,12 +393,13 @@ body {
   font-weight: 500;
 }
 
+
 /* 어바웃미 영역 */
 .about-me {
   position: relative;
   display: block;
   padding: 100px;
-  padding-bottom: 250px;
+  padding-bottom: 220px;
 }
 
 .about-me > .container {
@@ -482,6 +483,64 @@ body {
 .about-card-wrap .about-card .card-desc {
   font-size: 13px;
   line-height: 1.23;
+}
+
+
+/* 가능성 영역 */
+.possibility {
+  position: relative;
+  display: block;
+
+  padding: 100px;
+  margin-bottom: 100px;
+}
+
+.possibility > .container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pos-title-wrap {
+  position: relative;
+  display: block;
+}
+
+.pos-title {
+  font-family: 'Roboto';
+  font-size: 40px;
+  font-weight: 600;
+
+  margin-bottom: 20px;
+}
+
+.pos-desc {
+  font-family: 'Noto Sans KR';
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  text-align: left;
+  color: #666;
+
+  margin-bottom: 40px;
+}
+
+.pos-label {
+  font-family: 'Noto Sans KR';
+  font-size: 18px;
+  font-weight: 600;
+
+  margin-bottom: 10px;
+}
+
+.pos-label-desc {
+  font-family: 'Noto Sans KR';
+  font-size: 15px;
+  letter-spacing: -0.5px;
+  color: #666;
+
+  margin-bottom: 10px;
 }
 
 /* 스킬 영역 */
@@ -602,8 +661,6 @@ body {
 
   white-space: nowrap;
 }
-
-
 
 /* 하단 영역 */
 .footer {
