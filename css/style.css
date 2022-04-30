@@ -33,6 +33,10 @@ body {
   font-family: 'Roboto','Noto Sans KR', sans-serif;
 }
 
+:root {
+  --swiper-theme-color: #333333;
+}
+
 /* 공통요소 */
 .clearfix::after {
   content: '';
@@ -292,7 +296,7 @@ body {
   display: block;
 
   font-family: 'Noto Sans KR';
-  font-size: 50px;
+  font-size: 55px;
   font-weight: 600;
   line-height: 1.2;
 
@@ -303,9 +307,9 @@ body {
   content: '';
   position: absolute;
   top: 89%;
-  left: 153px;
+  left: 173px;
   display: block;
-  width: 145px;
+  width: 154px;
   height: 10px;
 
   background-color: #ffdd94;
@@ -317,11 +321,14 @@ body {
 }
 
 .visual-desc {
-  font-family: 'Noto Sans KR';
-  font-size: 20px;
+  font-family: 'Min Sans';
+  font-size: 19px;
+  font-weight: 400;
   line-height: 1.3;
   letter-spacing: -0.4px;
   text-align: left;
+
+  margin-left: 5px;
 }
 
 .visual-photo {
@@ -627,10 +634,34 @@ body {
 
   display: block;
   width: 100vw;
-  height: 1370px;
+  height: 1200px;
 
   background-color: #f5f7f9;
   z-index: -1;
+}
+
+.s-title-wrap {
+  position: relative;
+  display: block;
+  padding: 50px 0px;
+}
+
+.s-title {
+  font-family: 'Roboto';
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.s-desc {
+  font-family: 'Noto Sans KR';
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  text-align: center;
+  color: #666;
+
+  white-space: nowrap;
 }
 
 .skill-box {
@@ -641,9 +672,7 @@ body {
   background-color: #fff;
   
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-
   padding: 20px;
-  /* margin-right: 20px; */
 }
 
 .skill-box:last-child {
@@ -655,10 +684,37 @@ body {
   top: 40px;
   left: 50%;
   transform: translateX(-50%);
+
   display: block;
   width: 50px;
   height: 50px;
 }
+
+.sw-skills {
+  position: relative;
+  display: block;
+  padding: 30px 77px;
+  margin: 0 auto;
+}
+
+.swiper-slide {
+  height: calc((100% - 30px) / 2) !important;
+}
+
+.sw-skills-button-next,
+.sw-skills-button-prev {
+  position: absolute;
+  top: 54%;
+  transform: translateY(-50%);
+  display: block;
+  font-size: 30px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
 
 .s-box-title {
   position: absolute;
@@ -703,33 +759,13 @@ body {
   color: #666;
 }
 
-.s-right {
-  padding-left: 50px;
-}
-
-.s-title {
-  font-family: 'Roboto';
-  font-size: 40px;
-  font-weight: 600;
-}
-
-.s-desc {
-  font-family: 'Noto Sans KR';
-  font-size: 16px;
-  line-height: 1.2;
-  letter-spacing: -0.5px;
-  text-align: center;
-  color: #666;
-
-  white-space: nowrap;
-}
-
 /* 하단 영역 */
 .footer {
   position: relative;
   display: block;
-  padding: 100px;
 
+  font-family: 'Roboto';
+  padding: 50px 30px;
   background-color: #fff;
 }
 
@@ -738,21 +774,107 @@ body {
   display: block;
 }
 
-.f-title {
-  font-family: 'Noto Sans KR';
+.f-logo-wrap {
+  position: relative;
+  display: block;
+}
+
+.f-logo {
+  position: relative;
+  display: block;
+
+  padding-bottom: 50px;
+}
+
+.f-logo img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 50px;
+}
+
+.contact-wrap {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.contact-wrap a {
+  position: relative;
+  display: block;
+  float: left;
+  color: #fff;
+
+  margin: 0px 20px;
+}
+
+.f-github {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+.f-github i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   font-size: 20px;
 }
 
-.contact-wrap{
-  margin-top: 50px;
-  margin-bottom: 60px;
+.f-gmail {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ff5744;
 }
 
-.f-decs-wrap {
-  margin-top: 20px;
+.f-gmail i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
 }
 
-.c-desc {
-  font-family: 'Noto Sans KR';
-  white-space: nowrap;
+.f-kakao {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fae100;
+}
+
+.f-kakao i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+}
+
+.copyright {
+  position: relative;
+  display: block;
+
+  padding: 30px;
+  margin-top: 80px;
+}
+
+.copyright span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  color: #333;
 }

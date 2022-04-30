@@ -17,10 +17,38 @@
 }
 
 @font-face {
-    font-family: 'Roboto-Bold';
+    font-family: 'Roboto';
     src: url('../fonts/Roboto/Roboto-Bold.eot');
     src: url('../fonts/Roboto/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
         url('../fonts/Roboto/Roboto-Bold.woff') format('woff'),
         url('../fonts/Roboto/Roboto-Bold.woff2') format('woff2');
     font-weight: 700;
 }
+
+@font-face {
+    font-family: 'Min Sans';
+    src: url('../fonts/MinSans/MinSans-Regular.eot');
+    src: url('../fonts/MinSans/MinSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MinSans/MinSans-Regular.woff') format('woff'),
+        url('../fonts/MinSans/MinSans-Regular.woff2') format('woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Min Sans';
+    src: url('../fonts/MinSans/MinSans-Medium.eot');
+    src: url('../fonts/MinSans/MinSans-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MinSans/MinSans-Medium.woff') format('woff'),
+        url('../fonts/MinSans/MinSans-Medium.woff2') format('woff2');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Min Sans';
+    src: url('../fonts/MinSans/MinSans-Bold.eot');
+    src: url('../fonts/MinSans/MinSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MinSans/MinSans-Bold.woff') format('woff'),
+        url('../fonts/MinSans/MinSans-Bold.woff2') format('woff2');
+    font-weight: 700;
+}
+

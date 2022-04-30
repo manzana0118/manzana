@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     // 위로가기
     let gotop = $('.gotop');
-    gotop.click(function(){
+    gotop.click(function () {
         $('html').animate({
             scrollTop: 0
         }, 200);
@@ -84,7 +84,6 @@ $(document).ready(function () {
     let p_contents = $('.tab-pane');
     p_contents.eq(0).show();
 
-    console.log(p_button);
     $.each(p_button, function (index, item) {
         $(this).click(function () {
             p_button.removeClass('active');
@@ -92,5 +91,21 @@ $(document).ready(function () {
             p_contents.hide();
             p_contents.eq(index).show();
         });
+    });
+
+    // Skiils Swiper
+    let sw_skills = new Swiper('.sw-skills', {
+        loop: true,
+        observer: true, 
+        observeParents: true,
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+        slidesPerColumn: 2,
+        slidesPerColumnFill: 'row',
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '.sw-skills-button-next',
+            prevEl: '.sw-skills-button-prev',
+        },
     });
 });
