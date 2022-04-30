@@ -96,16 +96,16 @@ $(document).ready(function () {
     // Skiils Swiper
     let sw_skills = new Swiper('.sw-skills', {
         loop: true,
-        observer: true, 
-        observeParents: true,
         slidesPerView: 4,
         slidesPerGroup: 4,
         slidesPerColumn: 2,
         slidesPerColumnFill: 'row',
-        spaceBetween: 30,
+        spaceBetween: 0,
         navigation: {
             nextEl: '.sw-skills-button-next',
             prevEl: '.sw-skills-button-prev',
         },
     });
+    
+    
 });

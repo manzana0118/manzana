@@ -671,8 +671,9 @@ body {
   height: 270px;
   background-color: #fff;
   
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  box-shadow: rgb(65 65 66 / 15%) 16px 19px 11px 1px;
   padding: 20px;
+  margin: 7px;
 }
 
 .skill-box:last-child {
@@ -693,21 +694,24 @@ body {
 .sw-skills {
   position: relative;
   display: block;
-  padding: 30px 77px;
-  margin: 0 auto;
 }
 
 .swiper-slide {
-  height: calc((100% - 30px) / 2) !important;
+  /* width: 250px !important; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
 }
 
 .sw-skills-button-next,
 .sw-skills-button-prev {
   position: absolute;
-  top: 54%;
+  top: 59%;
   transform: translateY(-50%);
   display: block;
-  font-size: 30px;
+  font-size: 50px;
 }
 
 .swiper-button-next::after,
@@ -715,6 +719,13 @@ body {
   display: none;
 }
 
+.sw-skills-button-next {
+  right: 63px;
+}
+
+.sw-skills-button-prev {
+  left: 80px;
+}
 
 .s-box-title {
   position: absolute;
