@@ -492,30 +492,35 @@ body {
   align-items: center;
 }
 
+.b-desc span {
+  position: relative;
+  display: block;
+
+  font-size: 18px;
+  font-weight: 500;
+
+  margin-bottom: -20px;
+}
+
 .b-desc {
   font-family: 'Noto Sans KR';
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.5;
   text-align: left;
 
   padding-left: 140px;
 }
 
-.b-desc span {
-  position: relative;
-  display: block;
-
-  font-size: 20px;
-  font-weight: 500;
-
-  margin-bottom: -20px;
-}
-
 
 /* 브랜딩 반응형 */
 @media all and (max-width: 1000px) {
+  .b-desc span {
+    font-size: 17px;
+    margin-bottom: -15px;
+  }
+
   .b-desc {
-    font-size: 15px;
+    font-size: 12px;
     padding-left: 130px;
   }
 }
@@ -590,14 +595,14 @@ body {
 .about-me-wrap::before {
   content: '';
   position: absolute;
-  top: 85%;
-  left: -20%;
+  top: 150px;
+  left: -7%;
 
   display: block;
-  width: 100%;
+  width: 120%;
   height: 750px;
 
-  background: url('../images/About_me_bg_sm.png') no-repeat center;
+  background: url('../images/About_me_bg.png') no-repeat center;
   z-index: -1;
 }
 
@@ -606,6 +611,7 @@ body {
   display: block;
   height: 100%;
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .a-title {
@@ -703,6 +709,17 @@ body {
   .about-me {
     padding: 100px 0;
   }
+
+  .about-me-wrap::before {
+    top: 152px;
+    left: -20%;
+  
+    display: block;
+    width: 100%;
+    height: 750px;
+  
+    background: url('../images/About_me_bg_sm.png') no-repeat center;
+  }
   
 }
 
@@ -718,9 +735,7 @@ body {
 
 .possibility > .container {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: block;
 }
 
 .pos-title-wrap {
@@ -750,11 +765,12 @@ body {
 .pos-label-wrap {
   position: relative;
   display: block;
+  float: left;
 
-  margin-top: 60px;
   border: 3px solid rgba(252, 136, 123, 0.5);
   border-radius: 20px;
   padding: 30px;
+  margin-top: 40px;
 }
 
 .pos-label {
@@ -776,14 +792,14 @@ body {
 
 .pos-chart-wrap {
   position: absolute;
-  top: 5px;
-  right: -99px;
+  top: 40px;
+  right: -80px;
   display: block;
 }
 
 #myChart {
-  width: 700px;
-  height: 750px;
+  width: 700px !important;
+  height: 700px !important;
 }
 
 /* 가능성 반응형 */
@@ -801,8 +817,8 @@ body {
   }
 
   #myChart {
-    width: 600px;
-    height: 650px;
+    width: 600px !important;
+    height: 600px !important;
   }
 }
 
@@ -894,25 +910,26 @@ body {
 .slider {
   position: relative;
   max-width: 100%;
-  margin: 20px auto 0;
-  padding: 0 50px;
+  /* margin: 20px auto 0; */
+  padding: 0 85px;
 }
 
 .slider .inner {
-  overflow: hidden;
   margin-right: -1.333%;
+  overflow: hidden;
 }
 
 .slider .swiper-slide {
   display: flex;
   flex-wrap: wrap;
-  padding: 20px;
+  justify-content: flex-end;
 }
+
 
 .slider .list {
   width: 23%;
-  height: 250px;
-  margin: 1%;
+  /* height: 250px; */
+  margin: 0.3%;
   font-size: 20px;
   text-align: center;
 }
@@ -929,13 +946,21 @@ body {
   cursor: pointer;
 }
 
-.slider .swiper-prev {
-  left: 0;
+.slider .swiper-button-next::after,
+.slider .swiper-button-prev::after {
+  display: none;
 }
 
-.slider .swiper-next {
-  right: 0;
+.sw-skills-button-next {
+  right: 20px;
 }
+
+.sw-skills-button-prev {
+  left: 39px;
+}
+
+
+
 
 @media (max-width: 768px) {
   .slider .inner {
@@ -946,19 +971,6 @@ body {
     width: 48%;
     margin-right: 2%;
   }
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  display: none;
-}
-
-.sw-skills-button-next {
-  right: 30px;
-}
-
-.sw-skills-button-prev {
-  left: 10px;
 }
 
 .s-box-title {

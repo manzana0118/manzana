@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    AOS.init();
+
     // 위로가기
     let gotop = $('.gotop');
     gotop.click(function () {
@@ -13,7 +15,7 @@ $(document).ready(function () {
     let header = $('.header');
     let h_logo = $('.h-logo');
     let gnb = $('.gnb');
-    let hamburger = $('.hamburger-menu')
+    let hamburger = $('.hamburger-menu');
 
     // 헤더 고정
     $(window).scroll(function () {
@@ -48,7 +50,7 @@ $(document).ready(function () {
             labels: ['책임감', '성실성', '도전정신', '전문성', '소통능력'],
             datasets: [{
                 label: 'possibility',
-                data: [95, 90, 89, 78, 85],
+                data: [95, 90, 89, 83, 85],
                 backgroundColor: [
                     'rgba(252, 136, 123, 0.2)',
                 ],
@@ -72,7 +74,7 @@ $(document).ready(function () {
                 r: {
                     pointLabels: {
                         font: {
-                            size: 17,
+                            size: 15,
                             family: 'Noto Sans KR',
                             color: 'black'
                         }

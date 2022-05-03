@@ -33,10 +33,14 @@
 
 	<!-- BootStrap -->
 	<link rel="stylesheet" href="js/bootstrap/css/bootstrap.min.css">
-	<script src="js/bootstrap/js/bootstrap.min.js"></script>
+	<script src="js/bootstrap/js/bootstrap.js"></script>
 
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="css/font-awesome/css/all.min.css">
+	
+	<!-- AOS -->
+    <link href="js/aos/aos.css" rel="stylesheet">
+    <script src="js/aos/aos.js"></script>
 
 	<!-- Chart.js -->
 	<script src="js/chart/chart.js"></script>
@@ -105,19 +109,20 @@
 		<!-- 브랜딩 영역 -->
 		<section class="branding" id="branding">
 			<div class="container">
-				<h1 class="b-title">Branding</h1>
-				<div class="b-content-area">
+				<h1 class="b-title" data-aos-anchor-placement="top-center">Branding</h1>
+				<div class="b-content-area" data-aos="fade-right" data-aos-duration="700">
 					<img src="images/Logo.png" class="b-logo" alt="로고 격자">
-					<p class="b-desc">
+					<p class="b-desc" data-aos="fade-left" data-aos-duration="1000">
 						<span>💭 이 로고는 어떻게 만들어졌나요?</span>
-						<br>
+						<br/>
 						해당 로고는 제 이름의 이니셜인 'KDH'에서 'DH'를 가져온 뒤, 알파벳 'D'는 해맑은 웃음을 상징하는 이모티콘인 ':)'과 합성했으며,
 						알파벳 'H'는 양팔을 든 모양으로 반가움에 인사하는 모습을 표현하기 위해 인사하는 손 모양을 합성했습니다.
-						<br>
-						<br>
+						<br/>
+						<br/>
+						<br/>
 						<span>💭 로고를 이렇게 디자인한 이유가 있나요?</span>
-						<br>
-						제 MBTI는 ENFP로, 사람들과 이야기하고 어울리는 것을 좋아하며, 항상 새로운 사람에게 먼저 다가가 인사를 건네는 제 성격을 로고에 반영하고자 했습니다.
+						<br/>
+						제 MBTI는 <b>ENFP</b>로, 사람들과 이야기하고 어울리는 것을 좋아하며, 항상 새로운 사람에게 먼저 다가가 인사를 건네는 제 성격을 로고에 반영하고자 했습니다.
 						그래서 어떻게 하면 친화력이 좋은 성격과 저를 한번에 연관시킬 수 있을까 생각하다가 이니셜 중 하나인 'D'를 보고 웃는 입모양이 생각나 'D'와 웃음을 연관지었고,
 						'H'를 보니 양 팔을 높게 올린 모양이 연상되어 팔과 손으로 연관지었습니다.
 						또한 딱딱한 느낌을 피하고 친근하고 귀여운 느낌을 주고자 도형의 각 꼭짓점 부분을 둥글게 디자인하였습니다.
@@ -129,7 +134,7 @@
 		<section class="portfolio" id="portfolio">
 			<div class="container">
 				<!-- Title -->
-				<div class="row mb-4">
+				<div class="row mb-4" data-aos="fade-down" data-aos-duration="700">
 					<div class="col-lg-8 mx-auto text-center">
 						<h2 class="p-title">Portfolio</h2>
 						<p class="p-desc">열정 한 스푼, 노력 두 스푼, 호기심 한 스푼으로 제가 작업한 결과물입니다.🔥</p>
@@ -137,7 +142,7 @@
 				</div>
 
 				<!-- Tabs START -->
-				<ul class="nav nav-pills justify-content-sm-center px-3 p-nav-wrap">
+				<ul class="nav nav-pills justify-content-sm-center px-3 p-nav-wrap" data-aos="fade-up" data-aos-duration="900">
 					<!-- Tab item -->
 					<li class="nav-item me-2 me-sm-5">
 						<button class="nav-link mb-2 mb-md-0 active">Web Publishing</button>
@@ -154,7 +159,7 @@
 				<!-- Tabs END -->
 
 				<!-- Tabs content START -->
-				<div class="tab-content">
+				<div class="tab-content" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
 					<!-- Web Publishing START -->
 					<div class="tab-pane">
 						<div class="row g-4">
@@ -333,7 +338,7 @@
 											<!-- 웹사이트 반응형 간격 맞춤 -->
 											<a href="#" class="card-cate bg-purple bg-opacity-10 text-purple">웹사이트</a>
 											<a href="#"
-												class="card-cate bg-success bg-opacity-10 text-primary mx-1">반응형</a>
+												class="card-cate bg-success bg-opacity-10 text-primary mx-2">반응형</a>
 										</div>
 										<!-- Title -->
 										<h5 class="card-title"><a href="#">생명보험협회</a></h5>
@@ -375,7 +380,7 @@
 											<!-- 웹사이트 반응형 간격 맞춤 -->
 											<a href="#" class="card-cate bg-purple bg-opacity-10 text-purple">웹사이트</a>
 											<a href="#"
-												class="card-cate bg-success bg-opacity-10 text-primary mx-1">반응형</a>
+												class="card-cate bg-success bg-opacity-10 text-primary mx-2">반응형</a>
 										</div>
 										<!-- Title -->
 										<h5 class="card-title"><a href="#">산청군청</a></h5>
@@ -534,26 +539,31 @@
 							<div class="col-sm-6 col-lg-4 col-xl-3">
 								<div class="card shadow h-100">
 									<!-- Image -->
-									<img src="images/warning.png" class="card-img-top" alt="portfolio image">
+									<img src="images/vue_todo.png" class="card-img-top" alt="portfolio image">
 									<div class="card-body pb-0">
 										<!-- card-cate and favorite -->
-										<div class="d-flex justify-content-between mb-2">
-											<a href="#"
-												class="card-cate bg-success bg-opacity-10 text-success">Vue.js</a>
+										<div class="d-flex justify-flex-start mb-2">
+											<a href="#" class="card-cate bg-success bg-opacity-10 text-success">Vue.js</a>
+											<a href="#" class="card-cate bg-info bg-opacity-10 text-info mx-2">웹 어플리케이션</a>
 										</div>
 										<!-- Title -->
-										<h5 class="card-title"><a href="#">Lorem Ipsum is simply dummy text</a></h5>
+										<h5 class="card-title">
+											<a href="#">Todo List</a>
+										</h5>
 										<p class="card-desc">
-											It is a long established fact that a reader will be distracted by the
-											readable content of a page when looking at its layout.
+											Vue.js에 PHP를 연동하여 할일을 등록하고, 수정하고, 삭제하고, 검색할 수 있는 Todo Web Application을 만들었습니다.
 										</p>
 									</div>
 									<!-- Card footer -->
 									<div class="card-footer pt-0 pb-3">
 										<hr>
 										<div class="d-flex justify-content-between mt-2">
-											<a class="card-f-desc fw-light mb-0" href="#">
+											<a class="card-f-desc fw-light mb-0" href="http://manzana.dothome.co.kr/list" target="_blank">
 												<i class="fab fa-chrome"></i> Work
+											</a>
+											<a class="card-f-desc fw-light mb-0"
+												href="https://github.com/manzana0118/vue-php" target="_blank">
+												<i class="fab fa-github"></i> Github
 											</a>
 											<span class="card-f-desc fw-light mb-0">
 												<i class="fas fa-table text-orange me-2"></i>
@@ -576,81 +586,13 @@
 											<a href="#" class="card-cate bg-info bg-opacity-10 text-info">웹 어플리케이션</a>
 										</div>
 										<!-- Title -->
-										<h5 class="card-title"><a href="#">Lorem Ipsum is simply dummy text</a>
+										<h5 class="card-title">
+											<a href="#">
+												작업중
+											</a>
 										</h5>
 										<p class="card-desc">
-											It is a long established fact that a reader will be distracted by the
-											readable content
-										</p>
-									</div>
-									<!-- Card footer -->
-									<div class="card-footer pt-0 pb-3">
-										<hr>
-										<div class="d-flex justify-content-between">
-											<a class="card-f-desc fw-light mb-0" href="#">
-												<i class="fab fa-chrome"></i> Work
-											</a>
-											<span class="card-f-desc fw-light mb-0">
-												<i class="fas fa-table text-orange me-2"></i>
-												N일
-											</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- Card item END -->
-
-							<!-- Card item START -->
-							<div class="col-sm-6 col-lg-4 col-xl-3">
-								<div class="card shadow h-100">
-									<!-- Image -->
-									<img src="images/warning.png" class="card-img-top" alt="portfolio image">
-									<div class="card-body pb-0">
-										<!-- card-cate and favorite -->
-										<div class="d-flex justify-content-between mb-2">
-											<a href="#" class="card-cate bg-purple bg-opacity-10 text-purple">웹사이트</a>
-											<a href="#" class="card-f-desc fw-light mb-0"><i
-													class="far fa-heart"></i></a>
-										</div>
-										<!-- Title -->
-										<h5 class="card-title"><a href="#">JavaScript: Full Understanding</a>
-										</h5>
-										<p class="card-desc">Far advanced settling say finished raillery.
-											Offered chiefly farther</p>
-									</div>
-									<!-- Card footer -->
-									<div class="card-footer pt-0 pb-3">
-										<hr>
-										<div class="d-flex justify-content-between">
-											<a class="card-f-desc fw-light mb-0" href="#">
-												<i class="fab fa-chrome"></i> Work
-											</a>
-											<span class="card-f-desc fw-light mb-0">
-												<i class="fas fa-table text-orange me-2"></i>
-												N일
-											</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- Card item END -->
-
-							<!-- Card item START -->
-							<div class="col-sm-6 col-lg-4 col-xl-3">
-								<div class="card shadow h-100">
-									<!-- Image -->
-									<img src="images/warning.png" class="card-img-top" alt="portfolio image">
-									<div class="card-body pb-0">
-										<!-- card-cate and favorite -->
-										<div class="d-flex justify-content-between mb-2">
-											<a href="#" class="card-cate bg-info bg-opacity-10 text-info">웹 어플리케이션</a>
-										</div>
-										<!-- Title -->
-										<h5 class="card-title"><a href="#">Lorem Ipsum is simply dummy text</a>
-										</h5>
-										<p class="card-desc">
-											It is a long established fact that a reader will be distracted by the
-											readable content
+											업데이트 예정입니다.
 										</p>
 									</div>
 									<!-- Card footer -->
@@ -679,12 +621,16 @@
 										<!-- card-cate and favorite -->
 										<div class="d-flex justify-content-between mb-2">
 											<a href="#" class="card-cate bg-success bg-opacity-10 text-success">반응형</a>
-											<a href="#" class="h6 fw-light mb-0"><i class="far fa-heart"></i></a>
 										</div>
 										<!-- Title -->
-										<h5 class="card-title"><a href="#">PHP with - CMS Project</a></h5>
-										<p class="card-desc">Far advanced settling say finished raillery.
-											Offered chiefly farther</p>
+										<h5 class="card-title">
+											<a href="#">
+												작업중
+											</a>
+										</h5>
+										<p class="card-desc">
+											업데이트 예정입니다.
+										</p>
 									</div>
 									<!-- Card footer -->
 									<div class="card-footer pt-0 pb-3">
@@ -718,13 +664,16 @@
 										<!-- card-cate and favorite -->
 										<div class="d-flex justify-content-between mb-2">
 											<a href="#" class="card-cate bg-purple bg-opacity-10 text-purple">GNU5</a>
-											<a href="#" class="h6 fw-light mb-0"><i class="far fa-heart"></i></a>
 										</div>
 										<!-- Title -->
-										<h5 class="card-title"><a href="#">Sketch from A to Z: for app
-												designer</a></h5>
-										<p class="card-desc">Proposal indulged no do sociable he throwing
-											settling</p>
+										<h5 class="card-title">
+											<a href="#">
+												작업중
+											</a>
+										</h5>
+										<p class="card-desc">
+											업데이트 예정입니다.
+										</p>
 									</div>
 									<!-- Card footer -->
 									<div class="card-footer pt-0 pb-3">
@@ -754,15 +703,20 @@
 											<a href="#" class="card-cate bg-purple bg-opacity-10 text-purple">GNU5</a>
 										</div>
 										<!-- Title -->
-										<h5 class="card-title"><a href="#">Learn Invision</a></h5>
-										<p class="card-desc">Arrived off she elderly beloved him Course regard to up he
-											hardly.</p>
+										<h5 class="card-title">
+											<a href="#">
+												작업중
+											</a>
+										</h5>
+										<p class="card-desc">
+											업데이트 예정입니다.
+										</p>
 									</div>
 									<!-- Card footer -->
 									<div class="card-footer pt-0 pb-3">
 										<hr>
 										<div class="d-flex justify-content-between mt-2">
-											<a class="h6 fw-light mb-0" href="#">
+											<a class="fw-light mb-0" href="#">
 												<i class="fab fa-chrome"></i> Work
 											</a>
 											<span class="card-f-desc fw-light mb-0">
@@ -783,12 +737,17 @@
 									<div class="card-body pb-0">
 										<!-- card-cate and favorite -->
 										<div class="d-flex justify-content-between mb-2">
-											<a href="#" class="card-cate bg-success bg-opacity-10 text-success">반응형</a>
+											<a href="#" class="card-cate bg-purple bg-opacity-10 text-purple">GNU5</a>
 										</div>
 										<!-- Title -->
-										<h5 class="card-title"><a href="#">Graphic Design Masterclass</a></h5>
-										<p class="card-desc">Rooms oh fully taken by worse do. Points afraid
-											but may end.</p>
+										<h5 class="card-title">
+											<a href="#">
+												작업중
+											</a>
+										</h5>
+										<p class="card-desc">
+											업데이트 예정입니다.
+										</p>
 									</div>
 									<!-- Card footer -->
 									<div class="card-footer pt-0 pb-3">
@@ -815,14 +774,17 @@
 									<div class="card-body pb-0">
 										<!-- card-cate and favorite -->
 										<div class="d-flex justify-content-between mb-2">
-											<a href="#" class="card-cate bg-success bg-opacity-10 text-success">반응형</a>
-											<a href="#" class="h6 fw-light mb-0"><i class="far fa-heart"></i></a>
+											<a href="#" class="card-cate bg-purple bg-opacity-10 text-purple">GNU5</a>
 										</div>
 										<!-- Title -->
-										<h5 class="card-title"><a href="#">Create a Design System in Figma</a>
+										<h5 class="card-title">
+											<a href="#">
+												작업중
+											</a>
 										</h5>
-										<p class="card-desc">Rooms oh fully taken by worse do. Points afraid
-											but may end.</p>
+										<p class="card-desc">
+											업데이트 예정입니다.
+										</p>
 									</div>
 									<!-- Card footer -->
 									<div class="card-footer pt-0 pb-3">
@@ -851,11 +813,11 @@
 		<section class="about-me" id="aboutMe">
 			<div class="container clearfix">
 				<div class="about-me-wrap">
-					<div class="a-title-wrap">
+					<div class="a-title-wrap" data-aos="zoom-out-up" data-aos-duration="1000" data-aos-delay="400">
 						<h2 class="a-title">About Me</h2>
 						<p class="a-desc">'김다혜'가 어떤 사람인지 궁금하신가요❔</p>
 					</div>
-					<div class="about-card-area">
+					<div class="about-card-area" data-aos="fade-up-left" data-aos-duration="2000" data-aos-delay="600">
 						<div class="about-card-wrap">
 							<div class="about-card-bundle-1 clearfix">
 								<div class="about-card">
@@ -903,28 +865,28 @@
 		</section>
 		<!-- 가능성 영역 -->
 		<section class="possibility" id="possibility">
-			<div class="container">
-				<div class="pos-title-wrap">
+			<div class="container clearfix">
+				<div class="pos-title-wrap" data-aos="fade-right" data-aos-duration="700" data-aos-delay="1400">
 					<h2 class="pos-title">Possibility</h2>
 					<p class="pos-desc">저는 무한한 가능성을 가지고 있습니다🔥</p>
-					<div class="pos-label-wrap">
-						<h3 class="pos-label">책임감</h3>
-						<p class="pos-label-desc">본인이 맡은 일은 끝까지 해내는 강한 책임감을 가지고 있습니다.</p>
-						<br>
-						<h3 class="pos-label">성실성</h3>
-						<p class="pos-label-desc">시간약속을 잘 지키며, 프로젝트 마감 기간을 엄수합니다.</p>
-						<br>
-						<h3 class="pos-label">도전정신</h3>
-						<p class="pos-label-desc">성공과 실패보다 도전의 즐거움을 먼저 생각합니다.</p>
-						<br>
-						<h3 class="pos-label">전문성</h3>
-						<p class="pos-label-desc">퍼블리셔로써 기반을 탄탄히 갖추고 있으며, 개발자로서의 날개를 펼치려 합니다.</p>
-						<br>
-						<h3 class="pos-label">소통능력</h3>
-						<p class="pos-label-desc">늘 웃으며 배려로 상대를 대하는 능력을 갖추고 있습니다.</p>
-					</div>
 				</div>
-				<div class="pos-chart-wrap">
+				<div class="pos-label-wrap">
+					<h3 class="pos-label">책임감</h3>
+					<p class="pos-label-desc">본인이 맡은 일은 끝까지 해내는 강한 책임감을 가지고 있습니다.</p>
+					<br>
+					<h3 class="pos-label">성실성</h3>
+					<p class="pos-label-desc">시간약속을 잘 지키며, 프로젝트 마감 기간을 엄수합니다.</p>
+					<br>
+					<h3 class="pos-label">도전정신</h3>
+					<p class="pos-label-desc">성공과 실패보다 도전의 즐거움을 먼저 생각합니다.</p>
+					<br>
+					<h3 class="pos-label">전문성</h3>
+					<p class="pos-label-desc">퍼블리셔로써 기반을 탄탄히 갖추고 있으며, 개발자로서의 날개를 펼치려 합니다.</p>
+					<br>
+					<h3 class="pos-label">소통능력</h3>
+					<p class="pos-label-desc">늘 웃으며 배려로 상대를 대하는 능력을 갖추고 있습니다.</p>
+				</div>
+				<div class="pos-chart-wrap" data-aos="zoom-out-up" data-aos-duration="2000" data-aos-delay="1600">
 					<canvas id="myChart"></canvas>
 				</div>
 			</div>
@@ -932,12 +894,11 @@
 		<!-- 스킬 영역 -->
 		<section class="skills" id="skills">
 			<div class="container">
-				<div class="s-title-wrap">
+				<div class="s-title-wrap" data-aos="flip-up" data-aos-duration="1200" data-aos-delay="1800">
 					<h2 class="s-title">Skills</h2>
 					<p class="s-desc">제가 가진 기술들이 궁금하신가요❔</p>
 				</div>
 			</div>
-
 			<div class="slider">
 				<div class="inner">
 					<div class="swiper-wrapper">
@@ -1204,13 +1165,13 @@
 					</a>
 				</div>
 				<div class="contact-wrap clearfix">
-					<a class="f-github" href="https://github.com/manzana0118">
+					<a class="f-github" href="https://github.com/manzana0118" target="_blank">
 						<i class="fab fa-github-alt"></i>
 					</a>
 					<a class="f-gmail" href="mailto:dev.manzana00@gmail.com">
 						<i class="fas fa-envelope"></i>
 					</a>
-					<a class="f-kakao" href="https://open.kakao.com/o/smrYXVSd">
+					<a class="f-kakao" href="https://open.kakao.com/o/smrYXVSd" target="_blank">
 						<i class="fas fa-comments"></i>
 					</a>
 				</div>
