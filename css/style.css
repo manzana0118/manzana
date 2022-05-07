@@ -822,11 +822,13 @@ body {
   }
 }
 
+
 /* 스킬 영역 */
 .skills {
   position: relative;
   display: block;
   padding: 100px;
+  padding-bottom: 200px;
 }
 
 .skills > .container {
@@ -837,13 +839,13 @@ body {
 .skills > .container::before {
   content: '';
   position: absolute;
-  top: -7%;
+  top: -30%;
   left: 50%;
   transform: translateX(-50%);
 
   display: block;
   width: 100vw;
-  height: 1200px;
+  height: 75vw;
 
   background-color: #f5f7f9;
   z-index: -1;
@@ -880,7 +882,7 @@ body {
   height: 270px;
   background-color: #fff;
   
-  box-shadow: rgb(65 65 66 / 15%) 16px 19px 11px 1px;
+  box-shadow: rgb(65 65 66 / 8%) 8px 9px 11px 1px;
   padding: 20px;
   margin: 7px;
 }
@@ -905,8 +907,7 @@ body {
   display: block;
 }
 
-/*  추가 수정 된 부분  */
-
+/* Skills slider 부분 */
 .slider {
   position: relative;
   max-width: 100%;
@@ -922,9 +923,8 @@ body {
 .slider .swiper-slide {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: space-around;
 }
-
 
 .slider .list {
   width: 23%;
@@ -952,25 +952,11 @@ body {
 }
 
 .sw-skills-button-next {
-  right: 20px;
+  right: 10px;
 }
 
 .sw-skills-button-prev {
   left: 39px;
-}
-
-
-
-
-@media (max-width: 768px) {
-  .slider .inner {
-    margin-right: -2%;
-  }
-
-  .slider .list {
-    width: 48%;
-    margin-right: 2%;
-  }
 }
 
 .s-box-title {
@@ -1015,6 +1001,20 @@ body {
   text-align: center;
   color: #666;
 }
+
+
+/* 스킬 반응형 */
+@media (max-width: 768px) {
+  .slider .inner {
+    margin-right: -2%;
+  }
+
+  .slider .list {
+    width: 48%;
+    margin-right: 2%;
+  }
+}
+
 
 /* 하단 영역 */
 .footer {
