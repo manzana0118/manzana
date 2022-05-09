@@ -10,7 +10,6 @@ $(document).ready(function () {
         }, 200);
     });
 
-
     // 헤더
     let header = $('.header');
     let h_logo = $('.h-logo');
@@ -113,22 +112,30 @@ $(document).ready(function () {
     })
     
     function slideAct(){
-        var view = 0; //보이는 슬라이드 개수
-        var realInx = 0; //현재 페이지
-        var swiper = undefined;
+        let view = 0; //보이는 슬라이드 개수
+        let realInx = 0; //현재 페이지
+        let swiper = undefined;
     
         //디바이스 체크
-        var winWChk = '';
+        let winWChk = '';
         $(window).on('load resize', function (){
-            var winW = window.innerWidth;
-            if(winWChk != 'mo' && winW <= 768){ //모바일 버전으로 전환할 때
+            let winW = window.innerWidth;
+            // console.log(winW);
+            
+            
+            if(winW <= 768){ //모바일 버전으로 전환할 때
+                
+                slideList();
+
+            }else if(winWChk != 'mo' && winW <= 1000){ //모바일 버전으로 전환할 때
                 slideList()
                 winWChk = 'mo';
-            }
-            if(winWChk != 'pc' && winW >= 769){ //PC 버전으로 전환할 때
+
+            }else if(winWChk != 'pc'){ //PC 버전으로 전환할 때
                 slideList()
                 winWChk = 'pc';
             }
+
         }) 
         
         function slideList(){
@@ -138,20 +145,22 @@ $(document).ready(function () {
                 $('.slider .list').unwrap('swiper-slide');
             }
     
-            //보이는 슬라이드 개수 설정
-            if (window.innerWidth > 768){ //PC 버전
+            //보이는 슬라이드 개수 설정  
+            if (window.innerWidth > 1000){ //PC 버전
                 view = 8;
-            }else{ //mobile 버전
+            }else if(window.innerWidth > 768){ //mobile 버전
+                view = 4;
+            }else{
                 view = 2;
             }
     
             //리스트 그룹 생성 (swiper-slide element 추가)
-            var num = 0;
+            let num = 0;
             $('.slider').find('.list').each(function(i) {
                 $(this).addClass('list'+(Math.floor((i+view)/view)));
                 num = Math.floor((i+view)/view)
             }).promise().done(function(){
-                for (var i = 1; i < num+1; i++) {
+                for (let i = 1; i < num+1; i++) {
                     $('.slider').find('.list'+i+'').wrapAll('<div class="swiper-slide"></div>');
                     $('.slider').find('.list'+i+'').removeClass('list'+i+'');
                 }

@@ -156,6 +156,7 @@ body {
   color: #fff;
 }
 
+/* 공통요소 반응형 */
 @media all and (max-width: 1000px) {
   .container {
     width: 860px;
@@ -428,6 +429,7 @@ body {
   display: block;
   width: 33vw;
 
+  /* margin-right: 0vw; */
   margin-top: 50px;
 }
 
@@ -441,7 +443,6 @@ body {
     margin-top: -130px;
   }
 }
-
 
 @media all and (max-width: 1000px) {
   .visual > .container {
@@ -721,14 +722,22 @@ body {
   }
 
   .about-me-wrap::before {
-    top: 152px;
-    left: -20%;
+    top: 135px;
+    left: -21%;
   
     display: block;
     width: 100%;
     height: 750px;
   
-    background: url('../images/About_me_bg_sm.png') no-repeat center;
+    background: url('../images/About_me_bg_sm_1000.png') no-repeat center;
+  }
+
+  .about-card-area {
+    margin-right: -20px;
+  }
+
+  .about-card {
+    width: 250px;
   }
   
 }
@@ -772,6 +781,11 @@ body {
   margin-bottom: 40px;
 }
 
+.pos-contents-area {
+  position: relative;
+  display: block;
+}
+
 .pos-label-wrap {
   position: relative;
   display: block;
@@ -802,8 +816,8 @@ body {
 
 .pos-chart-wrap {
   position: absolute;
-  top: 40px;
-  right: -80px;
+  top: -85px;
+  right: -60px;
   display: block;
 }
 
@@ -814,31 +828,50 @@ body {
 
 /* 가능성 반응형 */
 @media all and (max-width: 1000px) {
+  .pos-contents-area {
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+
+  .pos-title-wrap {
+    margin-left: -30px;
+  }
+
   .pos-label-wrap {
-    padding: 20px;
+    width: 800px;
+    float: none;
+    padding: 30px 30px;
+    margin: 10px auto;
+    margin-left: -10px;
   }
 
   .pos-label {
-    font-size: 12px;
+    font-size: 17px;
   }
 
   .pos-label-desc {
-    font-size: 11px;
+    font-size: 14px;
+  }
+
+  .pos-chart-wrap {
+    position: relative;
+    top: 0;
+    right: 0%;
+    display: block;
+    margin: 0 auto;
   }
 
   #myChart {
-    width: 600px !important;
-    height: 600px !important;
+    width: 650px !important;
+    height: 650px !important;
   }
 }
-
 
 /* 스킬 영역 */
 .skills {
   position: relative;
   display: block;
   padding: 100px;
-  padding-bottom: 200px;
 }
 
 .skills > .container {
@@ -849,13 +882,13 @@ body {
 .skills > .container::before {
   content: '';
   position: absolute;
-  top: -30%;
+  top: -7%;
   left: 50%;
   transform: translateX(-50%);
 
   display: block;
   width: 100vw;
-  height: 75vw;
+  height: 60vw;
 
   background-color: #f5f7f9;
   z-index: -1;
@@ -917,7 +950,6 @@ body {
   display: block;
 }
 
-/* Skills slider 부분 */
 .slider {
   position: relative;
   max-width: 100%;
@@ -933,8 +965,9 @@ body {
 .slider .swiper-slide {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-end;
 }
+
 
 .slider .list {
   width: 23%;
@@ -962,7 +995,7 @@ body {
 }
 
 .sw-skills-button-next {
-  right: 10px;
+  right: 20px;
 }
 
 .sw-skills-button-prev {
@@ -1012,9 +1045,41 @@ body {
   color: #666;
 }
 
-
 /* 스킬 반응형 */
-@media (max-width: 768px) {
+@media all and (max-width: 1600px) {
+  .slider .swiper-slide {
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .slider {
+    padding: 0;
+  }
+
+  .slider .list {
+    width: 0%;
+    margin: 0;
+  }
+
+  .slider .swiper-slide {
+    justify-content: space-between;
+  }
+
+  .skill-box {
+    box-shadow: rgb(136 136 136 / 0%) 16px 19px 11px 1px;
+  }
+
+  .sw-skills-button-next {
+    right: -79px;
+  }
+
+  .sw-skills-button-prev {
+    left: -56px;
+  }
+}
+
+@media all and (max-width: 768px) {
   .slider .inner {
     margin-right: -2%;
   }
@@ -1025,7 +1090,6 @@ body {
   }
 }
 
-
 /* 하단 영역 */
 .footer {
   position: relative;
@@ -1034,6 +1098,7 @@ body {
   font-family: 'Roboto';
   padding: 50px 30px;
   background-color: #fff;
+  margin-top: 30px;
 }
 
 .footer > .container {
