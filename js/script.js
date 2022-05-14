@@ -105,94 +105,14 @@ $(document).ready(function () {
         });
     });
 
-
     // Skills 슬라이드
-    $(document).ready(function () {
-        slideAct();
-    })
-    
-    function slideAct(){
-        let view = 0; //보이는 슬라이드 개수
-        let realInx = 0; //현재 페이지
-        let swiper = undefined;
-    
-        //디바이스 체크
-        let winWChk = '';
-        $(window).on('load resize', function (){
-            let winW = window.innerWidth;
-            // console.log(winW);
-            
-            
-            if(winW <= 768){ //모바일 버전으로 전환할 때
-                
-                slideList();
-
-            }else if(winWChk != 'mo' && winW <= 1000){ //모바일 버전으로 전환할 때
-                slideList()
-                winWChk = 'mo';
-
-            }else if(winWChk != 'pc'){ //PC 버전으로 전환할 때
-                slideList()
-                winWChk = 'pc';
-            }
-
-        }) 
-        
-        function slideList(){
-            //리스트 초기화
-            if ($('.slider .list').parent().hasClass('swiper-slide')){
-                $('.slider .swiper-slide-duplicate').remove();
-                $('.slider .list').unwrap('swiper-slide');
-            }
-    
-            //보이는 슬라이드 개수 설정  
-            if (window.innerWidth > 1000){ //PC 버전
-                view = 8;
-            }else if(window.innerWidth > 768){ //mobile 버전
-                view = 4;
-            }else{
-                view = 2;
-            }
-    
-            //리스트 그룹 생성 (swiper-slide element 추가)
-            let num = 0;
-            $('.slider').find('.list').each(function(i) {
-                $(this).addClass('list'+(Math.floor((i+view)/view)));
-                num = Math.floor((i+view)/view)
-            }).promise().done(function(){
-                for (let i = 1; i < num+1; i++) {
-                    $('.slider').find('.list'+i+'').wrapAll('<div class="swiper-slide"></div>');
-                    $('.slider').find('.list'+i+'').removeClass('list'+i+'');
-                }
-            });
-    
-            sliderStart()
+    sw_skills = new Swiper('.sw-skills', {
+        slidesPerView: 4,
+        slidesPerGroup: 1,
+        loop:true,
+        navigation: {
+            nextEl: $('.sw-skills-button-next'),
+            prevEl: $('.sw-skills-button-prev')
         }
-    
-        //슬라이드 시작
-        function sliderStart(){
-            //슬라이드 초기화
-            if(swiper != undefined) {
-                swiper.destroy();
-                swiper == undefined;
-            }
-    
-            //슬라이드 실행
-            swiper = new Swiper('.slider .inner', {
-                slidesPerView: 1,
-                initialSlide :Math.floor(realInx/view),
-                resistanceRatio : 0,
-                loop:true,
-                navigation: {
-                    nextEl: $('.sw-skills-button-next'),
-                    prevEl: $('.sw-skills-button-prev'),
-                },
-                on: {
-                    slideChange: function () {
-                        realInx = this.realIndex*view
-                    }
-                },
-            });
-        }
-    }
+    });
 });
