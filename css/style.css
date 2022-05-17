@@ -157,18 +157,24 @@ body {
 }
 
 /* 공통요소 반응형 */
+@media all and (max-width: 1280px) {
+  .container {
+    width: 1100px;
+  }
+}
+
 @media all and (max-width: 1200px) {
   .container {
     width: 1000px;
   }
 }
 
-@media all and (max-width: 1000px) {
+@media all and (max-width: 990px) {
   .container {
-    width: 860px;
-    margin: 0 auto;
+    width: 980px;
   }
 }
+
 
 /* 이력서 */
 .resume {
@@ -317,73 +323,74 @@ body {
   border-radius: 10px;
 }
 
-.hamburger-menu {
+/* 모바일 메뉴 */
+.m-menu {
+  position: fixed;
+  left: 100%;
+  top: 0;
+
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99999;
+
+  transition: left 0.5s;
+}
+
+.m-menu-active {
+  left: 0 !important;
+}
+
+.m-gnb {
   position: absolute;
-  top: 20px;
-  right: 0px;
+  left: 50%;
+  top: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.m-gnb li {
+  margin: 10px 0;
+}
+
+.m-gnb li a {
+  font-size: 20px;
+  color: #fff;
+  padding: 20px;
+}
+
+.hamburger-menu {
+  position: fixed;
+  top: 16px;
+  right: 110px;
+
   display: none;
   font-size: 20px;
   border: 0;
   background-color: transparent;
+  
+  z-index: 999999;
 }
 
 /* 헤더 반응형 */
 @media all and (max-width: 1200px) {
-  
 }
 
 /* 헤더 반응형 */
-@media all and (max-width: 1000px) {
+@media all and (max-width: 990px) {
   .header-fixed {
     box-shadow: none;
     border-bottom: 0;
   }
 
   .nav {
-    position: absolute;
-    left: 50%;
-    top: 150%;
-    transform: translate(-50%, -50%);
     display: none;
-    width: 100%;
-    height: 100%;
-  }
-
-  .gnb {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-
-  .gnb > li {
-    width: 100%;
-    text-align: center;
-    margin: 5px 0;
-  }
-
-  .gnb > li a {
-    display: block;
-    width: 100%;
   }
 
   .hamburger-menu {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
     display: block;
-  }
-
-  .hamburger-menu-fixed {
-    top: 50%;
-  }
-
-  .nav.active {
-    display: flex;
   }
 }
 
@@ -469,15 +476,25 @@ body {
 @media all and (max-width: 1600px) {
   .visual-phrase {
     margin-top: -120px;
+    margin-left: 38px;
   }
 
   .visual-photo img {
+    width: 35vw;
     margin-top: -130px;
+    margin-right: 3px;
   }
 }
 
 @media all and (max-width: 1200px) {
+  .visual-phrase {
+    margin-top: -70px;
+  }
 
+  .visual-photo img {
+    width: 31vw;
+    margin-top: -85px;
+  }
 }
 
 @media all and (max-width: 1000px) {
@@ -505,6 +522,47 @@ body {
   .visual-photo img {
     margin-right: -1vw;
   } 
+}
+
+@media all and (max-width: 992px) {
+  .visual-title em::before {
+    left: 144px;
+    width: 122px;
+  }
+
+  .visual-title {
+    font-size: 45px;
+  }
+
+  .visual-phrase {
+    margin-left: 50px;
+  }
+
+  .visual-photo img {
+    width: 43vw;
+    margin-right: 1vw;
+  } 
+}
+
+@media all and (max-width: 990px) {
+  .visual-phrase {
+    margin-left: 0px;
+  }
+
+  .visual-title {
+    font-size: 38px;
+  }
+
+  .visual-desc {
+    font-size: 15px;
+    letter-spacing: -0.7px;
+    margin-left: 6px;
+  }
+  
+  .visual-photo img {
+    width: 37vw;
+    margin-right: -4vw;
+  }
 }
 
 /* 브랜딩 영역 */
@@ -571,6 +629,21 @@ body {
 
 
 /* 브랜딩 반응형 */
+@media all and (max-width: 1200px) {
+  .b-logo {
+    width: 300px;
+  }
+
+  .b-desc {
+    font-size: 15px;
+  }
+
+  .b-desc span {
+    font-size: 18px;
+  }
+}
+
+
 @media all and (max-width: 1000px) {
   .b-desc span {
     font-size: 17px;
@@ -580,6 +653,22 @@ body {
   .b-desc {
     font-size: 12px;
     padding-left: 130px;
+  }
+}
+
+@media all and (max-width: 990px) {
+  .b-logo {
+    width: 250px;
+  }
+
+  .b-desc span {
+    font-size: 17px;
+    margin-bottom: -15px;
+  }
+
+  .b-desc {
+    font-size: 12px;
+    padding-left: 90px;
   }
 }
 
@@ -763,9 +852,37 @@ body {
 }
 
 /* 어바웃미 반응형 */
-@media all and (max-width: 1200px) {
+@media all and (max-width: 1280px) {
+  .about-me-wrap::before {
+    left: -12%;
+  }
 
+  .a-title-wrap {
+    margin-right: 120px;
+  }
+
+  .about-card-area {
+    margin-right: 80px;
+  }
 }
+
+@media all and (max-width: 1200px)  {
+  .about-me-wrap::before {
+    left: -16%;
+    width: 100%;
+
+    background: url('../images/About_me_bg_sm.png') no-repeat center;
+  }
+
+  .about-card {
+    width: 250px;
+  }
+
+  .about-card-wrap {
+    margin-right: -65px;
+  }
+}
+
 
 @media all and (max-width: 1000px) {
   .about-me {
@@ -791,6 +908,24 @@ body {
     width: 250px;
   }
   
+}
+
+@media all and (max-width: 990px) {
+  .a-title-wrap {
+    margin-right: -20px;
+  }
+
+  .about-me-wrap::before {
+    left: -15%;
+  }
+
+  .about-card-wrap {
+    margin-right: -30px;
+  }
+
+  .about-card {
+    width: 225px;
+  }
 }
 
 
@@ -878,6 +1013,18 @@ body {
 }
 
 /* 가능성 반응형 */
+@media all and (max-width: 1280px) {
+  .pos-chart-wrap {
+    top: -50px;
+    right: -5px;
+  }
+
+  #myChart {
+    width: 630px !important;
+    height: 630px !important;
+  }
+}
+
 @media all and (max-width: 1200px) {
   .pos-label-wrap {
     padding: 15px;
@@ -894,6 +1041,7 @@ body {
 
   .pos-chart-wrap {
     top: -50px;
+    right: -54px;
   }
 
   #myChart {
@@ -1064,7 +1212,6 @@ body {
   transition: all 0.3s;
 }
 
-
 .swiper-slide:nth-child(2n+1) {
   top: 100px
 }
@@ -1168,11 +1315,32 @@ body {
 
 /* 스킬 반응형 */
 @media all and (max-width: 1600px) {
-  
+  .skills {
+    height: 63vw;
+  }
+  .sw-skills {
+    transform: translateY(430px);
+  }
+  .s-title-wrap {
+    margin-left: 13px;
+  }
+  .skill-box {
+    margin-left: 85px;
+  }
+  .sw-skills-button-next,
+  .sw-skills-button-prev {
+    top: 60%;
+  }
 }
 
 @media all and (max-width: 1200px) {
-  
+  .skills {
+    height: 85vw;
+  }
+
+  .sw-skills {
+    transform: translateY(400px);
+  }
 }
 
 @media all and (max-width: 1000px) {

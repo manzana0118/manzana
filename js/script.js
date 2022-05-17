@@ -35,11 +35,19 @@ $(document).ready(function () {
     // 헤더 반응형
     const toggleBtn = $('.hamburger-menu');
     const nav = $('.nav');
+    const m_menu = $('.m-menu');
     
     toggleBtn.click(function(){
-        nav.toggleClass('active');
+        m_menu.toggleClass('m-menu-active');
     });
 
+    $(window).resize(function(){
+        let temp = $(window).width();
+        if (temp >= 991) {
+            m_menu.removeClass('m-menu-active');
+            m_menu.css('left', '100%');
+        }
+    });
 
     // 가능성
     const ctx = document.getElementById('myChart').getContext('2d');
@@ -107,7 +115,7 @@ $(document).ready(function () {
 
     // Skills 슬라이드
     sw_skills = new Swiper('.sw-skills', {
-        slidesPerView: 4,
+        slidesPerView: 1,
         slidesPerGroup: 1,
         autoplay : {  
             delay : 3000,
@@ -117,6 +125,20 @@ $(document).ready(function () {
         navigation: {
             nextEl: $('.sw-skills-button-next'),
             prevEl: $('.sw-skills-button-prev')
+        },
+        breakpoints: {
+            1600: {
+                slidesPerView: 3,
+                slidesPerGroup: 1
+            },
+            1200:{
+                slidesPerView: 2,
+                slidesPerGroup: 1
+            },
+            900: {
+                slidesPerView: 2,
+                slidesPerGroup: 1
+            }
         }
     });
 
