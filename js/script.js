@@ -109,10 +109,26 @@ $(document).ready(function () {
     sw_skills = new Swiper('.sw-skills', {
         slidesPerView: 4,
         slidesPerGroup: 1,
+        autoplay : {  
+            delay : 3000,
+            disableOnInteraction : false
+        },
         loop:true,
         navigation: {
             nextEl: $('.sw-skills-button-next'),
             prevEl: $('.sw-skills-button-prev')
+        }
+    });
+
+    let sw_skills_pause = $('.sw-skills-stop');
+    sw_skills_pause.click(function () {
+        let temp = $(this).hasClass('sw-skills-play');
+        if (temp != true) {
+            $(this).addClass('sw-skills-play');
+            sw_skills.autoplay.stop();
+        } else {
+            $(this).removeClass('sw-skills-play');
+            sw_skills.autoplay.start();
         }
     });
 });
