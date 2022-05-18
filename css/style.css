@@ -175,6 +175,12 @@ body {
   }
 }
 
+@media all and (max-width: 820px) {
+  .container {
+    width: 810px;
+  }
+}
+
 
 /* 이력서 */
 .resume {
@@ -331,7 +337,7 @@ body {
 
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 99999;
 
   transition: left 0.5s;
@@ -363,16 +369,71 @@ body {
 
 .hamburger-menu {
   position: fixed;
-  top: 16px;
+  top: 28px;
   right: 110px;
 
   display: none;
-  font-size: 20px;
   border: 0;
   background-color: transparent;
   
   z-index: 999999;
 }
+
+.menu-trigger {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 28px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+
+.menu-trigger,
+.menu-trigger span {
+  display: inline-block;
+  transition: all .4s;
+  box-sizing: border-box;
+}
+
+
+.menu-trigger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+  border-radius: 4px;
+}
+
+.menu-trigger span:nth-of-type(1) {
+  top: 0;
+}
+
+.menu-trigger span:nth-of-type(2) {
+  top: 10px;
+}
+
+.menu-trigger span:nth-of-type(3) {
+  top: 20px;
+}
+
+.menu-trigger.active-1 span:nth-of-type(1) {
+  -webkit-transform: translateY (10px) rotate (-45deg);
+  transform: translateY(15px) rotate(-45deg);
+}
+
+.menu-trigger.active-1 span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.menu-trigger.active-1 span:nth-of-type(3) {
+  -webkit-transform: translateY(-10px) rotate(45deg);
+  transform: translateY(-4px) rotate(45deg);
+}
+
+
+
+
 
 /* 헤더 반응형 */
 @media all and (max-width: 1200px) {
@@ -391,6 +452,17 @@ body {
 
   .hamburger-menu {
     display: block;
+  }
+}
+
+@media all and (max-width: 820px) {
+
+}
+
+@media all and (max-width: 820px) {
+  .hamburger-menu {
+    top: 27px;
+    right: 40px;
   }
 }
 
@@ -562,6 +634,12 @@ body {
   .visual-photo img {
     width: 37vw;
     margin-right: -4vw;
+  }
+}
+
+@media all and (max-width: 820px) {
+  .visual-photo img {
+    margin-right: -2vw;
   }
 }
 
@@ -928,6 +1006,29 @@ body {
   }
 }
 
+@media all and (max-width: 820px) {
+  .about-me-wrap::before {
+    top: 135px;
+    left: 50%;
+    transform: translateX(-50%);
+  
+    display: block;
+    width: 100%;
+    height: 750px;
+  
+    background: url('../images/About_me_bg_vsm.png') no-repeat center;
+  }
+
+  .about-card-wrap {
+    margin-right: 30px;
+  }
+
+  .about-card {
+    width: 300px;
+    float: left;
+  }
+}
+
 
 /* 가능성 영역 */
 .possibility {
@@ -1090,6 +1191,22 @@ body {
   }
 }
 
+@media all and (max-width: 820px) {
+  .pos-chart-wrap {
+    position: relative;
+    top: 0;
+    right: 8%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .pos-label-wrap {
+    width: 670px;
+    padding: 20px;
+    margin-left: -30px;
+  }
+}
+
 /* 스킬 영역 */
 .skills {
   position: relative;
@@ -1152,7 +1269,7 @@ body {
   background-color: #fff;
   box-shadow: rgb(65 65 66 / 10%) 8px 9px 13px 1px;
   padding: 40px;
-  margin-left: 63px;
+  margin-left: 60px;
 }
 
 .skill-box img {
@@ -1333,6 +1450,12 @@ body {
   }
 }
 
+@media all and (max-width: 1460px) {
+  .skill-box {
+    margin-left: 170px;
+  }
+}
+
 @media all and (max-width: 1200px) {
   .skills {
     height: 85vw;
@@ -1345,6 +1468,16 @@ body {
 
 @media all and (max-width: 1000px) {
   
+}
+
+@media all and (max-width: 820px) {
+  .skills {
+    height: 107vw;
+  }
+
+  .s-title-wrap {
+    margin-left: -60px;
+  }
 }
 
 @media all and (max-width: 768px) {

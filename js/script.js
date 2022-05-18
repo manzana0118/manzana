@@ -49,6 +49,17 @@ $(document).ready(function () {
         }
     });
 
+    var burger = $('.menu-trigger');
+
+    burger.each(function(index){
+    var $this = $(this);
+    
+    $this.on('click', function(e){
+        e.preventDefault();
+        $(this).toggleClass('active-' + (index+1));
+    })
+    });
+
     // 가능성
     const ctx = document.getElementById('myChart').getContext('2d');
     const myChart = new Chart(ctx, {
@@ -127,6 +138,10 @@ $(document).ready(function () {
             prevEl: $('.sw-skills-button-prev')
         },
         breakpoints: {
+            1740: {
+                slidesPerView: 4,
+                slidesPerGroup: 1
+            },
             1600: {
                 slidesPerView: 3,
                 slidesPerGroup: 1
