@@ -1472,11 +1472,27 @@ body {
 
 @media all and (max-width: 820px) {
   .skills {
-    height: 107vw;
+    height: 112vw;
   }
 
   .s-title-wrap {
-    margin-left: -60px;
+    margin-left: -100px;
+  }
+
+  .skill-box {
+    margin-left: 175px;
+  }
+
+  .sw-skills {
+    transform: translateY(320px);
+  }
+
+  .swiper-slide:nth-child(2n+1) {
+    top: 0px
+  }
+  
+  .swiper-slide:nth-child(2n-1) {
+    top: 0px;
   }
 }
 

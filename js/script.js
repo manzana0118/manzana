@@ -49,10 +49,10 @@ $(document).ready(function () {
         }
     });
 
-    var burger = $('.menu-trigger');
+    let burger = $('.menu-trigger');
 
     burger.each(function(index){
-    var $this = $(this);
+    let $this = $(this);
     
     $this.on('click', function(e){
         e.preventDefault();
@@ -154,7 +154,9 @@ $(document).ready(function () {
                 slidesPerView: 2,
                 slidesPerGroup: 1
             }
-        }
+        },
+        observer: true,
+        observeParents: true
     });
 
     let sw_skills_pause = $('.sw-skills-stop');
