@@ -638,6 +638,11 @@ body {
 }
 
 @media all and (max-width: 820px) {
+  .visual-title em::before {
+    left: 119px;
+    width: 107px;
+  }
+
   .visual-photo img {
     margin-right: -2vw;
   }
