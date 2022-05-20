@@ -138,6 +138,10 @@ $(document).ready(function () {
             prevEl: $('.sw-skills-button-prev')
         },
         breakpoints: {
+            1900: {
+                slidesPerView: 4,
+                slidesPerGroup: 1
+            },
             1740: {
                 slidesPerView: 4,
                 slidesPerGroup: 1
