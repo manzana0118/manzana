@@ -1636,8 +1636,22 @@ body {
 }
 
 @media all and (max-width: 1460px) {
+  .skills {
+    height: 75vw;
+  }
+
+  .sw-skills {
+    transform: translateY(530px);
+  }
+
   .skill-box {
     margin-left: 170px;
+  }
+}
+
+@media all and (max-width: 1440px) {
+  .skill-box {
+    margin-left: 53px;
   }
 }
 

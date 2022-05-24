@@ -146,7 +146,7 @@ $(document).ready(function () {
                 slidesPerView: 4,
                 slidesPerGroup: 1
             },
-            1600: {
+            1400: {
                 slidesPerView: 3,
                 slidesPerGroup: 1
             },
